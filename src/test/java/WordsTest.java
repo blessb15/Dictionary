@@ -10,15 +10,24 @@ public class WordsTest {
   }
 
   @Test
-  public void Word_checkInstantiatesWord_Cactus() {
+  public void Words_checkInstantiatesWord_Cactus() {
     Words newWord = new Words("Cactus");
     assertEquals(true, newWord instanceof Words);
   }
 
   @Test
-  public void Word_checkInstantiatesMultipleWords_CactusApple() {
+  public void Words_checkInstantiatesMultipleWords_CactusApple() {
     Words newWord1 = new Words("Cactus");
     Words newWord2 = new Words("Apple");
     assertEquals(Words.returnWordList().size(),2);
+  }
+
+  @Test
+  public void Words_takeNewWordAddDefinitionon_Cactusisadesertplant() {
+    Words newWord = new Words("Cactus");
+    Definitions newDefinition = new Definitions("a dessert plant.");
+    newWord.addDefinition(newDefinition);
+  
+    assertTrue(newWord.getDefinition().contains(newDefinition));
   }
 }
