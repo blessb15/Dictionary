@@ -23,11 +23,10 @@ public class WordsTest {
   }
 
   @Test
-  public void Words_takeNewWordAddDefinitionon_Cactusisadesertplant() {
+  public void Words_takeNewWordAddDefinition_Cactusisadesertplant() {
     Words newWord = new Words("Cactus");
     Definitions newDefinition = new Definitions("a dessert plant.");
     newWord.addDefinition(newDefinition);
-  
     assertTrue(newWord.getDefinition().contains(newDefinition));
   }
 }

@@ -3,22 +3,27 @@ import java.util.ArrayList;
 public class Words {
 private String mWord;
 private static ArrayList<Words> wordList = new ArrayList<Words>();
-private ArrayList<Definitions> mDefinitions;
 private int mId;
+private ArrayList<Definitions> mDefinitions;
+
 
   public Words(String word){
     mWord = word;
     wordList.add(this);
-    mDefinitions = new ArrayList<Definitions>();
     mId = wordList.size();
+    mDefinitions = new ArrayList<Definitions>();
   }
 
   public String returnWord(){
     return mWord;
   }
 
-  public static ArrayList<Words> returnWordList(){
+  public static ArrayList<Words> all() {
     return wordList;
+  }
+
+  public static void clear(){
+    wordList.clear();
   }
 
   public int getId(){
@@ -33,15 +38,11 @@ private int mId;
     }
   }
 
-  public static void clear(){
-    wordList.clear();
+  public ArrayList<Definitions> getDefinition(){
+    return mDefinitions;
   }
 
   public void addDefinition(Definitions definition){
     mDefinitions.add(definition);
-  }
-
-  public ArrayList<Definitions> getDefinition(){
-    return mDefinitions;
   }
 }
