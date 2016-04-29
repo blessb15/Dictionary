@@ -19,7 +19,7 @@ public class WordsTest {
   public void Words_checkInstantiatesMultipleWords_CactusApple() {
     Words newWord1 = new Words("Cactus");
     Words newWord2 = new Words("Apple");
-    assertEquals(Words.returnWordList().size(),2);
+    assertEquals(Words.all().size(),2);
   }
 
   @Test

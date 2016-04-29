@@ -1,0 +1,12 @@
+.center{
+  text-align: center;
+}
+
+.jumbotron {
+  margin-top: 0px;
+  background: linear-gradient(#9f9f9f, #ece7d7);
+}
+
+body{
+  background-color: #ece7d7;
+}
